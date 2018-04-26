@@ -4,7 +4,21 @@
 
 /*1) to the navmenu items (Home, Location, Blog) that will show and hide the contents for that specific navmenu item.*/
 
+var navContents = document.getElementsByClassName("navi");
 
+for(var i = 0; i<navContents.length; i++){
+    navContents[i].addEventListener('click', showContents);
+}
+
+function showContents() {
+    console.log('test');
+    var navItem = this.querySelectorAll('.inner')[0];
+    if(navItem.style.display === 'block'){
+        navItem.style.display = 'none';
+    }else{
+        navItem.style.display = 'block';
+    }
+} 
 
 
 
